@@ -18,8 +18,9 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 
 // custom middleware
-app.use(someMw({option1: 'This could result in different output', option2: 'This could result in a different output'}))
 app.use(requestTime({option1: 'Option here'}))
+app.use(someMw({option1: 'This could result in different output', option2: 'This could result in a different output'}))
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
